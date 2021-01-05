@@ -1,12 +1,12 @@
 #!/bin/bash
 #https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot
 
-destination1=$HOME"/dark-linux-repo/x86_64/"
-#destination2=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/"
-#destination3=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_iso/x86_64/"
-#destination4=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_testing/x86_64/"
-#destination5=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_xlarge/x86_64/"
-#destination6=$HOME"/ARCO/TEST/"
+destination1=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo/x86_64/"
+destination2=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/"
+destination3=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_iso/x86_64/"
+destination4=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_testing/x86_64/"
+destination5=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_xlarge/x86_64/"
+destination6=$HOME"/ARCO/TEST/"
 
 destiny=$destination1
 
@@ -18,7 +18,7 @@ pwdpath=$(echo $PWD)
 pwd=$(basename "$PWD")
 
 #which packages are always going to build with makepkg or choice 2
-makepkglist=""
+makepkglist="arcolinux-awesome-git arcolinux-bspwm-git arcolinux-dwm-git arcolinux-dwm-nemesis-git arcolinux-dwm-slstatus-git arcolinux-herbstluftwm-git arcolinux-i3wm-git arcolinux-icewm-git arcolinux-openboxb-git arcolinux-openbox-git arcolinux-openbox-xtended-git arcolinux-qtile-git arcolinux-spectrwm-git arcolinux-sway-git arcolinux-xmonad-polybar-git arcolinux-xmonad-xmobar-git"
 
 for i in $makepkglist
 do
@@ -48,7 +48,7 @@ if [[ $CHOICE == "1" ]] ; then
   echo "#########        Let us build the package in CHROOT "$(basename `pwd`)
   echo "#############################################################################################"
   tput sgr0
-  CHROOT=$HOME/Documents/chroot
+  CHROOT=$HOME/Documents/chroot-arcolinux
   arch-nspawn $CHROOT/root pacman -Syu
   makechrootpkg -c -r $CHROOT
 

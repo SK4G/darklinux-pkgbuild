@@ -1,10 +1,10 @@
-# Maintainer: SK4G <luizsalazar87@gmail.com>
+# Maintainer: Luiz Salazar <luizsalazar87@gmail.com>
 pkgname=darklinux-config-awesome-git
 _pkgname=darklinux-config-awesome
 _destname1="/etc/skel/.config/"
 _licensedir="/usr/share/darklinux/licenses/"
 pkgver=20.10
-pkgrel=3
+pkgrel=1
 pkgdesc="Configuration files for ArcoLinuxB awesome"
 arch=('any')
 url="https://github.com/SK4G/darklinux-config-awesome"
