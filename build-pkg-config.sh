@@ -1,6 +1,7 @@
 #!/bin/bash
 #https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot
-destination1=$HOME"/dark-linux-repo/x86_64/"
+
+destination1=$HOME"/darklinux-repo/x86_64/"
 #destination2=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/"
 #destination3=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_iso/x86_64/"
 #destination4=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_testing/x86_64/"
@@ -8,10 +9,6 @@ destination1=$HOME"/dark-linux-repo/x86_64/"
 #destination6=$HOME"/ARCO/TEST/"
 
 destiny=$destination1
-
-cd $HOME/scripts
-sh awesome-config-sync.sh
-cd $HOME/darklinux-pkgbuild/darklinux-awesome/
 
 # 2. makepkg"
 # 1. chroot"

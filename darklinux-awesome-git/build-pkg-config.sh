@@ -1,6 +1,7 @@
 #!/bin/bash
 #https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot
-destination1=$HOME"/PKGBUILDS/darklinux-repo/x86_64/"
+
+destination1=$HOME"/darklinux-repo/x86_64/"
 #destination2=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/"
 #destination3=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_iso/x86_64/"
 #destination4=$HOME"/ARCO/ARCOLINUX-REPO/arcolinux_repo_testing/x86_64/"
@@ -93,7 +94,7 @@ echo "###################                       build done                   ###
 echo "#############################################################################################"
 tput sgr0
 
-cd $HOME/PKGBUILDS/darklinux-repo/
+#cd $HOME/darklinux-repo/
 
-sh git-v3.sh
+#sh git-v3.sh
 #sh repo-scan-git-v3.sh
