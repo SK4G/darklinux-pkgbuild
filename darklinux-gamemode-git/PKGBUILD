@@ -1,7 +1,7 @@
 # Maintainer: Luiz Salazar <luizsalazar87@gmail.com>
 pkgname=darklinux-gamemode-git
 _pkgname=darklinux-gamemode
-_destname1="/etc/skel/.config/"
+_destname1="~/."
 _licensedir="/usr/share/darklinux/licenses/"
 pkgver=1.0
 pkgrel=1
