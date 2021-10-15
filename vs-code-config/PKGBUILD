@@ -1,0 +1,33 @@
+# Maintainer: Luiz Salazar <luizsalazar87@gmail.com>
+pkgname=vs-code-config-git
+_pkgname=vs-code-config
+_destname1="/etc/skel/.config/Code/"
+_destname2="/etc/skel/.config/ukui/"
+_destname1="/etc/skel/.vscode"
+_licensedir="/usr/share/darklinux/licenses/"
+pkgver=1
+pkgrel=01
+pkgdesc="VS Code C++ config files"
+arch=('any')
+url="https://github.com/SK4G/darklinux-xfce"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=(
+
+)
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+https://github.com/SK4G/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+package() {
+	mkdir -p "${pkgdir}${_licensedir}${_pkgname}"
+	mv "${srcdir}/${_pkgname}/"LICENSE "${pkgdir}${_licensedir}${_pkgname}/LICENSE"
+	mkdir -p "${pkgdir}${_destname1}"
+	cp -r "${srcdir}/${_pkgname}/${_destname1}/"* "${pkgdir}${_destname1}"
+	mkdir -p "${pkgdir}${_destname2}"
+	cp -r "${srcdir}/${_pkgname}/${_destname2}/"* "${pkgdir}${_destname2}"
+	mkdir -p "${pkgdir}${_destname3}"
+	cp -r "${srcdir}/${_pkgname}/${_destname3}/"* "${pkgdir}${_destname3}"
+}
