@@ -1,0 +1,30 @@
+# Maintainer: Luiz Salazar <luizsalazar87@gmail.com>
+pkgname=darklinux-mousepad-git
+_pkgname=darklinux-mousepad
+_destname1="/etc/skel/.local/share/"
+#_destname2="/etc/skel/.local/share/gtksourceview-4/styles/"
+_licensedir="/usr/share/darklinux/licenses/"
+pkgver=1.0
+pkgrel=1
+pkgdesc="XFCE Mousepad text editor configuration settings"
+arch=('any')
+url="https://github.com/SK4G/darklinux-mousepad"
+license=('GPL3')
+makedepends=('git')
+depends=(mousepad)
+conflicts=(
+
+)
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+https://github.com/SK4G/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+package() {
+	
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+}
