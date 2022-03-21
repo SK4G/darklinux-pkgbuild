@@ -1,6 +1,9 @@
 post_install() {
+    tput setaf 1
     echo -e "\n** Requires darklinux-gtksourceview4-themes-git **\n"
+    tput setaf 3
     echo -e "\n** Backup dconf files stored in /etc/skel/.config/dconf/ **\n"
+    tput setaf 7
 }
 
 post_upgrade() {
