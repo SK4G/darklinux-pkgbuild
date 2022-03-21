@@ -1,16 +1,6 @@
 #!/bin/bash
 #https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot
 
-#tput setaf 0 = black 
-#tput setaf 1 = red 
-#tput setaf 2 = green
-#tput setaf 3 = yellow 
-#tput setaf 4 = dark blue 
-#tput setaf 5 = purple
-#tput setaf 6 = cyan 
-#tput setaf 7 = gray 
-#tput setaf 8 = light gray
-
 destination1=$HOME"/darklinux/darklinux-repo/x86_64/"
 
 destiny=$destination1
@@ -18,7 +8,7 @@ destiny=$destination1
 # 2. makepkg"
 # 1. chroot"
 
-CHOICE=1
+CHOICE=2
 pwdpath=$(echo $PWD)
 pwd=$(basename "$PWD")
 
@@ -70,6 +60,8 @@ else
   echo "#############################################################################################"
   tput sgr0
   makepkg --sign
+  #makepkg
+  rm -rf src pkg darklinux-*
 fi
 
 echo "Moving created files to " $destiny

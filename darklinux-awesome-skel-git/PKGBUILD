@@ -4,7 +4,7 @@ _pkgname=darklinux-awesome-skel
 _destname1="/etc/skel/.config/awesome/"
 _licensedir="/usr/share/darklinux/licenses/"
 pkgver=1.0
-pkgrel=1
+pkgrel=01
 pkgdesc="Skel configuration files for Darklinux awesome"
 arch=('any')
 url="https://github.com/SK4G/darklinux-awesome-skel"
@@ -38,7 +38,7 @@ arcolinux-config-xfce-git
 arcolinux-config-xmonad-git
 arcolinux-config-xtended-git
 )
-depends=()
+depends=("darklinux-mousepad-git")
 provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}::"git+https://github.com/SK4G/${_pkgname}.git")
