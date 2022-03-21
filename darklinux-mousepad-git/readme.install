@@ -1,10 +1,5 @@
-#!/bin/bash
-set -e
-
 post_install() {
-	cd /etc/skel/.local/share/
-	dconf load /org/xfce/mousepad/ < mousepad.settings.dconf
-    echo -e "\n** The files have been installed in ~/.local/share/ **\n"
+    echo -e "\n** Run /etc/skel/.local/share/mousepad-settings-restore.sh to restore **\n"
 }
 
 post_upgrade() {
