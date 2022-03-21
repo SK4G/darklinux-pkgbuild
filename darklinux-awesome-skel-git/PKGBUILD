@@ -38,7 +38,7 @@ arcolinux-config-xfce-git
 arcolinux-config-xmonad-git
 arcolinux-config-xtended-git
 )
-depends=("darklinux-mousepad-git")
+depends=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}::"git+https://github.com/SK4G/${_pkgname}.git")
