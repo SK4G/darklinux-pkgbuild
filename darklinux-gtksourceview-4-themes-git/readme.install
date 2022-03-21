@@ -1,9 +1,6 @@
 post_install() {
     tput setaf 3
-    echo -e "\n** The files have been installed in /etc/skel/.local/share/gtksourceview-4/styles/ **\n"
-    echo -e "run command below to copy files"
-    tput setaf 1
-    echo -e "cp -r /etc/skel/.local/share/gtksourceview-4 /home/user/.local/share/"
+    echo -e "\n** The themes have been installed in /usr/share/gtksourceview-4/styles/ **\n"
     tput setaf 7
     echo
 }

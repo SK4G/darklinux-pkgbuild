@@ -1,7 +1,8 @@
 # Maintainer: Luiz Salazar <luizsalazar87@gmail.com>
 pkgname=darklinux-gtksourceview-4-themes-git
 _pkgname=darklinux-gtksourceview-4-themes
-_destname1="/etc/skel/.local/share/gtksourceview-4/styles/"
+_destname1="/usr/share/gtksourceview-4/styles/"
+#_destname2="/etc/skel/.local/share/gtksourceview-4/styles/"
 _licensedir="/usr/share/darklinux/licenses/"
 pkgver=1
 pkgrel=01
