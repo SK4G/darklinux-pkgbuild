@@ -1,5 +1,6 @@
 post_install() {
-    echo -e "\n** Run /etc/skel/.local/share/mousepad-settings-restore.sh to restore **\n"
+    echo -e "\n** Requires darklinux-gtksourceview4-themes-git **\n"
+    echo -e "\n** To restore run /etc/skel/.local/share/Mousepad/mousepad-settings-restore.sh **\n"
 }
 
 post_upgrade() {
