@@ -11,7 +11,7 @@ arch=('any')
 url="https://github.com/SK4G/darklinux-mousepad-dconf"
 license=('GPL3')
 makedepends=('git')
-depends=("mousepad")
+depends=("mousepad" "darklinux-gtksourceview-4-themes-git")
 conflicts=(
 
 )

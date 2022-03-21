@@ -4,13 +4,13 @@ _pkgname=darklinux-mousepad
 _destname1="/etc/skel/.local/share/"
 _licensedir="/usr/share/darklinux/licenses/"
 pkgver=1.0
-pkgrel=1
+pkgrel=01
 pkgdesc="XFCE Mousepad text editor configuration settings"
 arch=('any')
 url="https://github.com/SK4G/darklinux-mousepad"
 license=('GPL3')
 makedepends=('git')
-depends=("mousepad")
+depends=("mousepad" "darklinux-gtksourceview-4-themes-git")
 conflicts=(
 
 )

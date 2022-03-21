@@ -1,8 +1,6 @@
 post_install() {
-    tput setaf 1
-    echo -e "\n** Requires darklinux-gtksourceview4-themes-git **\n"
     tput setaf 3
-    echo -e "\n** To restore cd and run /etc/skel/.local/share/Mousepad/mousepad-settings-restore.sh **\n"
+    echo -e "\n** To restore cd and sh /etc/skel/.local/share/Mousepad/mousepad-settings-restore.sh **\n"
     tput setaf 7
 }
 
