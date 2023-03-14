@@ -1,7 +1,7 @@
 #!/bin/bash
 #https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot
 
-destination1=$HOME"/darklinux/darklinux-repo/x86_64/"
+destination1=/mnt/TEAM-1TB/darklinux/darklinux-repo/x86_64/
 
 destiny=$destination1
 
@@ -91,9 +91,3 @@ echo "###################                       build done                   ###
 echo "#############################################################################################"
 tput sgr0
 
-rsync -av $HOME"/darklinux/darklinux-repo/x86_64/"* /mnt/TEAM-1TB/darklinux/darklinux-repo/x86_64/
-
-cd $HOME/darklinux/darklinux-repo/
-
-sh repo-scan-git-v3.sh
-#sh git-v3.sh

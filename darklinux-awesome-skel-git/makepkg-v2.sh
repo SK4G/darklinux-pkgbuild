@@ -91,6 +91,8 @@ echo "###################                       build done                   ###
 echo "#############################################################################################"
 tput sgr0
 
+rsync -av $HOME"/darklinux/darklinux-repo/x86_64/"* /mnt/TEAM-1TB/darklinux/darklinux-repo/x86_64/
+
 cd $HOME/darklinux/darklinux-repo/
 
 sh repo-scan-git-v3.sh
